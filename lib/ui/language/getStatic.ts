@@ -13,12 +13,16 @@ export const getStaticPaths = () => ({
   paths: getI18nPaths(),
 });
 
-export const getI18nProps = async (ctx: any, ns: any = ["common"]): Promise<any> => {
+export const getI18nProps = async (
+  ctx: any,
+  ns: any = ["common"]
+): Promise<any> => {
   const locale = ctx?.params?.locale;
-  console.log(ctx);
+
   let props = {
     ...(await serverSideTranslations(locale, ns)),
   };
+
   return props;
 };
 

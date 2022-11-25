@@ -1,3 +1,4 @@
+import { Trans } from "next-i18next";
 import Image from "next/image";
 import ArrowLink from "~/icons/arrow-link.svg";
 import background from "~/public/images/home/background.jpg";
@@ -13,23 +14,29 @@ const Splash = () => {
       </div>
       <div className="relative h-full flex flex-col items-center pt-52 flex-1 justify-start space-y-16 pb-32">
         <h2 className="text-center mx-2.5 text-8xl">
-          {/* <Trans i18nKey="splash.headline">
-            WIE EINE <span className="text-pink-400 font-thin font-serif">bank</span>
-            <br></br>
-            ABER BESSER IN
-            <br></br>
-            <span className="text-primary font-thin font-serif">jedem</span> ASPEKT
-          </Trans> */}
+          <Trans i18nKey="splash.headline">
+            WIE EINE
+            <span className="text-pink-400 font-thin font-serif">bank</span>
+            <br /> ABER BESSER
+          </Trans>
         </h2>
         <div>
           <WaitlistForm />
         </div>
         <div className="mx-16">
-          <Image src={iPhone} alt="iPhone 13 with Screenshot of the Superlight App" />
+          <Image
+            src={iPhone}
+            alt="iPhone 13 with Screenshot of the Superlight App"
+          />
         </div>
       </div>
       <div className="wrapper text-black bg-primary flex">
-        <a className="py-2 text-lg marquee flex" href="https://zmartup.com" target="_blank" rel="noreferrer">
+        <a
+          className="py-2 text-lg marquee flex"
+          href="https://zmartup.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span className="sr-only">Go to crowd Investing Page in new Tab</span>
           <p aria-hidden="true">
             <ArrowLink aria-hidden className="mx-6 h-6" />
