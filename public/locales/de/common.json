@@ -1,11 +1,13 @@
 {
   "waitlist": {
-    "button": "Warteliste beitreten",
+    "button": "Get early access",
     "already-exists-error": "Du bist bereits in der Warteliste!",
-    "success": "Glückwunsch! Du bist in der Warteliste."
+    "success": "Glückwunsch! Du bist in der Warteliste.",
+    "note": "Erhalte exklusive Vorteile durch Beitreten der Warteliste"
   },
   "splash": {
-    "headline": "WIE EINE <1>bank</1> <br/> ABER BESSER"
+    "headline": "Das Wallet, das Ihre Bank ersetzt",
+    "subtitle": "Geld in sekundenschnelle empfangen und senden. Banking kompatibel.<br />Null Netzwerk Gebühren."
   },
   "other": "Ein unerwarteter Fehler ist aufgetreten!"
 }

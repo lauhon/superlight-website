@@ -1,3 +1,4 @@
+import Banner from "~/components/home/banner";
 import FAQ from "~/components/home/faq";
 import Qualities from "~/components/home/qualities";
 import Splash from "~/components/home/splash";
@@ -14,6 +15,7 @@ const Home = () => {
 
       <main className="space-y-24 bg-white pb-8">
         <Splash />
+        <Banner />
         <Qualities />
         <div>
           <FAQ />

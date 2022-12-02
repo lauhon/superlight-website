@@ -1,11 +1,13 @@
 {
   "waitlist": {
-    "button": "Join the waitlist",
+    "button": "Get early access",
     "already-exists-error": "You already joined the Waitlist!",
-    "success": "Congrats! You are on the waitlist."
+    "success": "Congrats! You are on the waitlist.",
+    "note": "Get exclusive rewards by joining the waitlist"
   },
   "splash": {
-    "headline": "LIKE A <1>bank</1> <br/> BUT BETTER"
+    "headline": "The wallet made to replace your bank.",
+    "subtitle": "Send and receive money instantly. Banking compatible.<br />Zero network fees."
   },
   "other": "Oops, something happened unexpectedly!"
 }

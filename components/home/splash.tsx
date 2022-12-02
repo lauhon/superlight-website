@@ -1,105 +1,49 @@
 import { Trans } from "next-i18next";
 import Image from "next/image";
-import ArrowLink from "~/icons/arrow-link.svg";
-import background from "~/public/images/home/background.jpg";
-import iPhone from "~/public/images/home/iPhone.png";
+import background from "~/public/images/home/background.png";
+import iPhones from "~/public/images/home/iPhones.png";
 import WaitlistForm from "../shared/waitlist-form";
 
 const Splash = () => {
   return (
-    <section className="relative h-full bg-black text-white">
-      <div className="absolute inset-0 overflow-hidden h-screen w-full">
-        <Image src={background} alt="" className="w-full h-full" />
+    <section className="relative h-full flex bg-black text-white pt-32 px-16">
+      <div className="absolute overflow-hidden h-screen inset-0 bg-black">
+        <Image
+          src={background}
+          alt=""
+          className="h-full w-2/3 absolute right-0"
+        />
         <div className="w-full bg-black h-64 -mt-32 blur-3xl"></div>
       </div>
-      <div className="relative h-full flex flex-col items-center pt-52 flex-1 justify-start space-y-16 pb-32">
-        <h2 className="text-center mx-2.5 text-8xl">
-          <Trans i18nKey="splash.headline">
-            WIE EINE
-            <span className="text-pink-400 font-thin font-serif">bank</span>
-            <br /> ABER BESSER
-          </Trans>
-        </h2>
-        <div>
-          <WaitlistForm />
+      <div className="flex items-center flex-col lg:flex-row">
+        <div className="relative flex flex-1 flex-col text-center lg:text-left 2xl:px-20 2xlpt-52 pt-16 px-2.5 justify-start pb-32">
+          <h2 className="text-6xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-white via-gray-400  to-white">
+            <Trans i18nKey="splash.headline">
+              The wallet made to replace your bank.
+            </Trans>
+          </h2>
+          <p className="text-xl text-offset mt-4">
+            <Trans i18nKey="splash.subtitle">
+              Send and receive money instantly. Banking compatible.
+              <br />
+              Zero network fees.
+            </Trans>
+          </p>
+          <div className="mt-8">
+            <WaitlistForm />
+          </div>
         </div>
-        <div className="mx-16">
+
+        <div className="flex-1 flex justify-center z-10">
           <Image
-            src={iPhone}
+            priority
+            className="mx-24"
+            width={410}
+            src={iPhones}
             alt="iPhone 13 with Screenshot of the Superlight App"
           />
         </div>
       </div>
-      <div className="wrapper text-black bg-primary flex">
-        <a
-          className="py-2 text-lg marquee flex"
-          href="https://zmartup.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="sr-only">Go to crowd Investing Page in new Tab</span>
-          <p aria-hidden="true">
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            FINANZIERUNGSRUNDE IST AKTIV
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            SICHERE DIR DEINEN ANTEIL
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            INVESTIERE JETZT
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            FINANZIERUNGSRUNDE IST AKTIV
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            SICHERE DIR DEINEN ANTEIL
-          </p>
-          <p aria-hidden="true">
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            FINANZIERUNGSRUNDE IST AKTIV
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            SICHERE DIR DEINEN ANTEIL
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            INVESTIERE JETZT
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            FINANZIERUNGSRUNDE IST AKTIV
-            <ArrowLink aria-hidden className="mx-6 h-6" />
-            SICHERE DIR DEINEN ANTEIL
-          </p>
-        </a>
-      </div>
-      <style jsx>
-        {`
-          @media (prefers-reduced-motion) {
-            .marquee {
-              animation: none;
-            }
-          }
-
-          .wrapper {
-            max-width: 100%;
-            overflow: hidden;
-          }
-
-          .marquee {
-            white-space: nowrap;
-            animation: marquee 10s linear infinite;
-            display: flex;
-            flex-direction: row;
-          }
-
-          .marquee p {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-          }
-
-          @keyframes marquee {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-        `}
-      </style>
     </section>
   );
 };

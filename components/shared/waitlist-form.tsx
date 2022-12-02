@@ -54,29 +54,34 @@ const WaitlistForm = () => {
   };
 
   return (
-    <div className="flex justify-center px-12 relative">
+    <div className="flex flex-col relative  items-center lg:items-start ">
       <label htmlFor="WaitlistForm" className="text-xs sr-only">
         Sign up here to join the Waitlist and keep updated
       </label>
       <form
         id="WaitlistForm"
         onSubmit={handleSubmit}
-        className="sm:bg-stone-900 flex flex-col sm:flex-row rounded-full"
+        className="sm:bg-stone-900 text-sm flex max-w-xl flex-col sm:flex-row rounded-full"
       >
         <input
-          className=" bg-stone-900 text-slate-300 px-8 fw py-4 rounded-full mb-4 sm:mb-0"
+          className=" bg-stone-900 text-slate-300 flex-1 px-8 fw py-4 rounded-full mb-4 sm:mb-0"
           autoComplete="email"
           placeholder="max.musterman@email.com"
           type="email"
           onChange={changeValue}
         />
         <button
-          className="bg-white text-black px-12 fw py-4 font-bold rounded-full"
+          className="bg-white text-black px-12 fw py-6 font-bold rounded-full"
           type="submit"
         >
-          <Trans i18nKey="waitlist.button"> Join the waitlist</Trans>
+          <Trans i18nKey="waitlist.button">Get early access</Trans>
         </button>
       </form>
+      <span className="lg:ml-4 mt-2 text-xs text-small">
+        <Trans i18nKey="waitlist.note">
+          Get exclusive rewards by joining the waitlist
+        </Trans>
+      </span>
       {popupContent.status !== "hidden" && (
         <div
           aria-live="polite"

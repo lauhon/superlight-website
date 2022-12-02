@@ -17,7 +17,7 @@ const WaitlistButton = () => {
   return (
     <button
       onClick={click}
-      className="bg-white text-black px-12 fw py-2 font-bold rounded-full"
+      className="bg-input text-white px-11 py-2 font-bold text-lg rounded-full"
     >
       {t("waitlist.button")}
     </button>
